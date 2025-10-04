@@ -1,0 +1,42 @@
+# tiketSepur
+
+Backend REST API untuk pemesanan tiket kereta api, dibangun dengan Go (Gin Framework) dan PostgreSQL.  
+Mendukung integrasi Redis untuk caching dan RabbitMQ untuk sistem notifikasi asynchronous.
+
+---
+
+🚀 Fitur Utama
+
+- CRUD data tiket dan jadwal kereta
+- Autentikasi & otorisasi pengguna
+- Booking tiket dan penyimpanan transaksi
+- Integrasi Redis untuk cache data cepat
+- RabbitMQ untuk sistem notifikasi (email, log, atau message broker)
+- Arsitektur modular & scalable
+
+---
+
+🧩 Tech Stack
+
+- **Language:** Go (Golang)
+- **Framework:** Gin
+- **Database:** PostgreSQL
+- **Cache:** Redis
+- **Message Broker:** RabbitMQ
+- **ORM:** sqlx
+- **Dependency Management:** Go Modules
+
+---
+
+📂 Struktur Folder
+tiketSepur/
+├── configs/ # Konfigurasi environment & load config
+├── controllers/ # Handler untuk setiap endpoint
+├── database/
+│ ├── connection/ # Inisialisasi koneksi DB
+│ └── migrations/ # File migrasi database
+├── models/ # Struktur data & model database
+├── routes/ # Daftar routing aplikasi
+├── utils/ # Redis, RabbitMQ, helper, dsb
+├── main.go # Entry point aplikasi
+└── go.mod # Dependency list
